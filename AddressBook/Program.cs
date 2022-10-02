@@ -10,13 +10,20 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            //UC-2 Ability to add a new contact to Address Book
+            //UC-3 Ability to edit their existing contact details using their names
             Console.WriteLine("Welcome to my Address Book");
 
-            AddressBook.AddPerson();
-            
-            AddressBook.ListPeople();
 
+            int choice = 0;
+            while (choice != 2)
+            {
+                Console.WriteLine("1.To get Furthur choices \n2.To exit");
+                choice = Convert.ToInt32(Console.ReadLine());
+                if(choice!=2)
+                    AddressBook.AddPerson();
+            }
+            AddressBook.ListPeople();
+            Console.WriteLine("You are out of the Address Book!....");
             Console.ReadLine();
 
         }

@@ -103,6 +103,22 @@ namespace AddressBook
                         }
                     }
                     break;
+                case 3:
+                    string name1;
+                    Console.WriteLine("Enter Name you want to remove: ");
+                    name1 = Console.ReadLine();
+                    for (int i = 0; i < People.Count; i++)
+                    {
+                        Contacts contact = People[i];
+                        //PrintPerson(contact);
+
+                        if (contact.First_name == name1)
+                        {
+                            People.RemoveAt(i);
+                            Console.WriteLine(contact.First_name+" is Removed!..");
+                        }
+                    }
+                    break;
             }
             
         }
